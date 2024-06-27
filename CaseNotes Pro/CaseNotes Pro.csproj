@@ -1,0 +1,437 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8DF84DFD-E09A-4A3C-80CB-B09C85422482}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FirstResponse.CaseNotes</RootNamespace>
+    <AssemblyName>CaseNotesPro</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.0</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>FirstResponse.CaseNotes.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Icons\text_lock.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>CaseNotes.pfx</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="i00SpellCheck, Version=1.0.0.41578, Culture=neutral, PublicKeyToken=e54ee8abaa7bc571, processorArchitecture=MSIL">
+      <ExecutableExtension>.exe</ExecutableExtension>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data.SQLite, Version=1.0.80.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Assemblies\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Management" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutBox.designer.cs">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Activate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Activate.Designer.cs">
+      <DependentUpon>Activate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Case.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Case.designer.cs">
+      <DependentUpon>Case.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CheckList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CheckList.Designer.cs">
+      <DependentUpon>CheckList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CheckListMetadata.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CheckListMetadata.Designer.cs">
+      <DependentUpon>CheckListMetadata.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\XCheckBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Classes\XComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Classes\XLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Classes\XPictureBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Classes\XRadioButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Classes\XTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CoolPrintPreview\CoolPrintPreviewControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CoolPrintPreview\CoolPrintPreviewDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CoolPrintPreview\CoolPrintPreviewDialog.designer.cs">
+      <DependentUpon>CoolPrintPreviewDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CoolPrintPreview\PageImageList.cs" />
+    <Compile Include="FindDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FindDialog.Designer.cs">
+      <DependentUpon>FindDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Functions.cs" />
+    <Compile Include="GuiController.cs" />
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MruStripMenu.cs" />
+    <Compile Include="NewNote.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewNote.Designer.cs">
+      <DependentUpon>NewNote.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Note.cs" />
+    <Compile Include="Password.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Password.Designer.cs">
+      <DependentUpon>Password.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Preferences.cs" />
+    <Compile Include="Printing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Printing.Designer.cs">
+      <DependentUpon>Printing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RichTextBoxDocument.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SelectCheckList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectCheckList.Designer.cs">
+      <DependentUpon>SelectCheckList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings.cs" />
+    <Compile Include="Template.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Template.Designer.cs">
+      <DependentUpon>Template.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TextRuler\TextRuler.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UpdatePrefs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdatePrefs.designer.cs">
+      <DependentUpon>UpdatePrefs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SQLiteDatabase.cs" />
+    <Compile Include="Classes\XListBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <EmbeddedResource Include="AboutBox.resx">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Activate.resx">
+      <DependentUpon>Activate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Case.resx">
+      <DependentUpon>Case.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CheckList.resx">
+      <DependentUpon>CheckList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CheckListMetadata.resx">
+      <DependentUpon>CheckListMetadata.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CoolPrintPreview\CoolPrintPreviewDialog.resx">
+      <DependentUpon>CoolPrintPreviewDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FindDialog.resx">
+      <DependentUpon>FindDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewNote.resx">
+      <DependentUpon>NewNote.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Password.resx">
+      <DependentUpon>Password.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Printing.resx">
+      <DependentUpon>Printing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelectCheckList.resx">
+      <DependentUpon>SelectCheckList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template.resx">
+      <DependentUpon>Template.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdatePrefs.resx">
+      <DependentUpon>UpdatePrefs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="Assemblies\dic.dic" />
+    <None Include="Assemblies\i00SpellCheck.exe.config" />
+    <None Include="Assemblies\syn.syn" />
+    <None Include="Assemblies\CaseNotes.snk" />
+    <None Include="CaseNotes.pfx" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Reported Bugs\Bug List for PC CaseNotes.docx" />
+    <None Include="Resources\dic.dic" />
+    <None Include="Resources\syn.syn" />
+    <None Include="SQL\CaseNotes.mwb" />
+    <None Include="SQL\CaseNotes.mwb.bak" />
+    <None Include="SQL\CaseNotes.s3db" />
+    <None Include="Support\RTF Test Document.rtf" />
+    <None Include="Templates\Default Template.rtf" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assemblies\def.def" />
+    <Content Include="Assemblies\i00SpellCheck.exe" />
+    <Content Include="Icons\CaseNotesPro.ico" />
+    <Content Include="Icons\document_lock.ico" />
+    <Content Include="Icons\text_lock.ico" />
+    <Content Include="Icons\text_ok.ico" />
+    <Content Include="Resources\ActualSizeHS.png" />
+    <Content Include="Resources\AlignTableCellLeftHS.png" />
+    <Content Include="Resources\AlignTableCellMiddleCenterHS.png" />
+    <Content Include="Resources\AlignTableCellMiddleRightHS.png" />
+    <None Include="Resources\arrow S-green-16.png" />
+    <None Include="Resources\arrow N-green-16.png" />
+    <Content Include="Resources\boldhs.png" />
+    <Content Include="Resources\button.jpg" />
+    <Content Include="Resources\calendar.png" />
+    <None Include="Resources\CaseNotesLogo.png" />
+    <Content Include="Resources\check2.png" />
+    <Content Include="Resources\checkbox.jpg" />
+    <Content Include="Resources\CheckSpellingHS.png" />
+    <Content Include="Resources\Color_font.png" />
+    <Content Include="Resources\combobox.jpg" />
+    <Content Include="Resources\CommentHS.png" />
+    <Content Include="Resources\CopyHS.png" />
+    <Content Include="Resources\CutHS.png" />
+    <None Include="Resources\db1-down-16.png" />
+    <Content Include="Resources\def.def" />
+    <Content Include="Resources\delete2.png" />
+    <Content Include="Resources\DeleteHS.png" />
+    <Content Include="Resources\disk_blue.ico" />
+    <Content Include="Resources\disk_blue.png" />
+    <Content Include="Resources\disk_blue1.png" />
+    <Content Include="Resources\Document.bmp" />
+    <Content Include="Resources\document_lock.png" />
+    <Content Include="Resources\EditInformationHS.png" />
+    <Content Include="Resources\Edit_RedoHS.png" />
+    <Content Include="Resources\Edit_UndoHS.png" />
+    <Content Include="Resources\exit.ico" />
+    <Content Include="Resources\exit.png" />
+    <Content Include="Resources\find.png" />
+    <Content Include="Resources\fit_to_size.png" />
+    <Content Include="Resources\FontHS.png" />
+    <None Include="Resources\FR Logo colour web-sml-transLI.png" />
+    <Content Include="Resources\Help.png" />
+    <Content Include="Resources\IndentHS.png" />
+    <Content Include="Resources\ItalicHS.png" />
+    <Content Include="Resources\label.jpg" />
+    <Content Include="Resources\listbox.jpg" />
+    <Content Include="Resources\List_BulletsHS.png" />
+    <Content Include="Resources\List_NumberedHS.png" />
+    <Content Include="Resources\l_indent_pos_lower.png" />
+    <Content Include="Resources\l_indet_pos_upper.png" />
+    <Content Include="Resources\NewWindow.bmp" />
+    <Content Include="Resources\NoteHS.png" />
+    <Content Include="Resources\openfolderHS.bmp" />
+    <Content Include="Resources\openHS.png" />
+    <Content Include="Resources\OptionsHS.png" />
+    <Content Include="Resources\OutdentHS.png" />
+    <Content Include="Resources\PasteHS.png" />
+    <Content Include="Resources\picturebox.jpg" />
+    <Content Include="Resources\placeholder.jpg" />
+    <Content Include="Resources\PrintHS.png" />
+    <Content Include="Resources\radiobutton.jpg" />
+    <Content Include="Resources\r_indent_pos.png" />
+    <Content Include="Resources\Save.bmp" />
+    <Content Include="Resources\scroll_view.png" />
+    <Content Include="Resources\ShowRulerHS.png" />
+    <Content Include="Resources\tab_pos.png" />
+    <None Include="Resources\text-highlight-24.png" />
+    <Content Include="Resources\textbox.jpg" />
+    <None Include="Resources\text_lock.png" />
+    <Content Include="Resources\text_underlined.png" />
+    <Content Include="Resources\UnderlineHS.png" />
+    <Content Include="SQL\CaseNotes db Create SQL.txt" />
+    <Content Include="SQL\SQLite samples.txt" />
+    <Content Include="Support\Bug-Feature List.txt" />
+    <Content Include="Templates\Default Checklist.xml" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
