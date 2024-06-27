@@ -5,4 +5,5 @@ CaseNotes stores your notes, checklists and screen captures in a SQLite database
 It has been used by thousands of forensic analysts around the world since 2003 – we’re very excited to finally release this new version, which has so many new features, based on user requests.
 
 I've decided to open-source the code for CaseNotes - so you are welcome to download the source code, modify it and use it without restriction.
+This is written in C# using Visual Studio and has a number of add-in libraries for doing things like spell checking, and printing.
 If you want the last compiled executable, you can find that under releases - the most up-to-date version is 2.18.4.3.
