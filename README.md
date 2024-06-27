@@ -1,4 +1,4 @@
-# CaseNotes 
+# CaseNotes 2.18.4.3
 The purpose of CaseNotes is to provide a single lightweight application program to run on the Microsoft Windows platform to allow incident responders & forensic analysts and examiners of any discipline to securely record their contemporaneous notes electronically.
 This is especially useful as more and more jurisdictions are enforcing regulatory standards for investigations, like ISO17025 in the United Kingdom.
 CaseNotes stores your notes, checklists and screen captures in a SQLite database that can optionally be encrypted for additional security. 
