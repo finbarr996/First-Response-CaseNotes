@@ -9,7 +9,7 @@ This is written in C# using Visual Studio and has a number of add-in libraries f
 If you want the last compiled executable, you can find that under releases - the most up-to-date version is 2.18.4.3.
 
 ## The main features are:
-lexible configuration of case meta-data (case details, like the reference number, etc.)
+Flexible configuration of case meta-data (case details, like the reference number, etc.)
 Secure ‘write-once, read-many’ style of case note data capture and storage
 Full audit trail of case note data entry and metadata edits in a self-contained log
 Spell checker built in, with the ability to add/delete words from the dictionary
